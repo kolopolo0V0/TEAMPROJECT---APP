@@ -6,7 +6,7 @@ import TitleBar from "../components/TitleBar";
 export default function MemoryPage2() {
   const checkAnswer = (index) => {
     if (index === 2) {
-      Alert.alert("정답입니다!", "잘 기억했어요 😊");
+      Alert.alert("정답입니다!", "잘 기억했어요 ");
     } else {
       Alert.alert("오답입니다.", "앞에서 본 모양과 달라요.");
     }
@@ -18,17 +18,17 @@ export default function MemoryPage2() {
 
         <TitleBar text="앞에서 본 모양을 찾아보세요." />
 
-        {/* 보기 1 */}
+     
         <TouchableOpacity style={styles.row} onPress={() => checkAnswer(1)}>
           <Image source={require("../assets/option1.png")} style={styles.optionImage} />
         </TouchableOpacity>
 
-        {/* 정답 */}
+       
         <TouchableOpacity style={styles.row} onPress={() => checkAnswer(2)}>
           <Image source={require("../assets/option2.png")} style={styles.optionImage} />
         </TouchableOpacity>
 
-        {/* 보기 3 */}
+   
         <TouchableOpacity style={styles.row} onPress={() => checkAnswer(3)}>
           <Image source={require("../assets/option3.png")} style={styles.optionImage} />
         </TouchableOpacity>
@@ -53,3 +53,4 @@ const styles = StyleSheet.create({
     resizeMode: "contain",
   },
 });
+
