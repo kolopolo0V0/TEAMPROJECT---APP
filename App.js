@@ -15,19 +15,19 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator screenOptions={{ headerShown: false }}>
         
-        {/* 1. 시계 문제 */}
+      
         <Stack.Screen name="Clock1" component={ClockPage1} />
 
-        {/* 2. 도형찾기 문제 */}
+      
         <Stack.Screen name="Page2" component={Page2} />
 
-        {/* 3. 생활도구 분류 문제 */}
+   
         <Stack.Screen name="Page3" component={Page3} />
 
-        {/* 4. 기억력 문제 */}
+    
         <Stack.Screen name="Memory1" component={MemoryPage1} />
 
-        {/* 5. 정답 고르기 */}
+    
         <Stack.Screen name="Memory2" component={MemoryPage2} />
 
       </Stack.Navigator>
