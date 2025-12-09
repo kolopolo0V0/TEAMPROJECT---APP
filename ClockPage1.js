@@ -6,14 +6,14 @@ import TitleBar from "../components/TitleBar";
 export default function ClockPage1({ navigation }) {
   const [selectedClock, setSelectedClock] = useState(null);
   const [correct, setCorrect] = useState({
-    left: false,   // 왼쪽 = 10:00
-    right: false,  // 오른쪽 = 5:00
+    left: false,   
+    right: false,  
   });
 
   const [hour, setHour] = useState("");
   const [minute, setMinute] = useState("");
 
-  // 정답 체크
+
   const selectAnswer = (time) => {
     if (!selectedClock) {
       Alert.alert("먼저 시계를 선택하세요.");
@@ -34,7 +34,7 @@ export default function ClockPage1({ navigation }) {
     }
   };
 
-  // 다음 페이지 이동
+
   const handleNext = () => {
     if (!correct.left || !correct.right) {
       Alert.alert("안내", "위의 시계 두 문제를 모두 풀어주세요.");
@@ -54,7 +54,7 @@ export default function ClockPage1({ navigation }) {
 
         <TitleBar text="다음 시계를 보고 서로 맞는 시간을 연결하세요." />
 
-        {/* 시계 2개 */}
+    
         <View style={styles.clockRow}>
           <TouchableOpacity onPress={() => setSelectedClock("left")}>
             <Image
@@ -77,7 +77,7 @@ export default function ClockPage1({ navigation }) {
           </TouchableOpacity>
         </View>
 
-        {/* 정답 버튼 */}
+      
         <View style={styles.optionsRow}>
           <TouchableOpacity style={styles.option} onPress={() => selectAnswer("5:00")}>
             <Text style={styles.optionText}>5:00</Text>
@@ -88,7 +88,7 @@ export default function ClockPage1({ navigation }) {
           </TouchableOpacity>
         </View>
 
-        {/*      현재 시간 입력      */}        
+             
         <View style={styles.inputBox}>
           <View style={styles.inputTitleRow}>
             <View style={styles.playIcon} />
@@ -118,7 +118,7 @@ export default function ClockPage1({ navigation }) {
           </View>
         </View>
 
-        {/* 다음 버튼 */}
+      
         <View style={styles.nextButtonWrapper}>
           <TouchableOpacity style={styles.nextButton} onPress={handleNext}>
             <Text style={styles.nextButtonText}>다음</Text>
@@ -170,7 +170,7 @@ const styles = StyleSheet.create({
     fontWeight: "600",
   },
 
-  // ========== 현재 시간 입력 박스 ==========
+
   inputBox: {
     backgroundColor: "#f1f1f1",
     borderRadius: 5,
@@ -219,7 +219,7 @@ const styles = StyleSheet.create({
     marginRight: 10,
   },
 
-  // 다음 버튼
+
   nextButtonWrapper: {
     marginTop: 20,
     alignItems: "flex-end",
@@ -236,4 +236,5 @@ const styles = StyleSheet.create({
     fontWeight: "600",
   },
 });
+
 
