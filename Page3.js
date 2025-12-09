@@ -27,29 +27,29 @@ export default function Page3({ navigation }) {
   return (
     <SafeAreaView style={styles.container}>
 
-      {/* 상단 타이틀 */}
+ 
       <View style={styles.titleBar}>
         <Text style={styles.titleText}>아래 그림을 보고 질문에 답해 보세요.</Text>
       </View>
 
-      {/* 문제 이미지: Row 방식으로 안정 배치 */}
+
       <View style={styles.imageBox}>
 
-        {/* 1줄 */}
+ 
         <View style={styles.row}>
           <Image source={require("../assets/dumbbell.png")} style={styles.img} />
           <Image source={require("../assets/toothpaste.png")} style={styles.img} />
           <Image source={require("../assets/totebag.png")} style={styles.img} />
         </View>
 
-        {/* 2줄 */}
+   
         <View style={styles.row}>
           <Image source={require("../assets/ladle.png")} style={styles.img} />
           <Image source={require("../assets/toothbrush.png")} style={styles.img} />
           <Image source={require("../assets/scrubber.png")} style={styles.img} />
         </View>
 
-        {/* 3줄 */}
+  
         <View style={styles.row}>
           <Image source={require("../assets/cup.png")} style={styles.img} />
           <Image source={require("../assets/chopsticks.png")} style={styles.img} />
@@ -58,7 +58,7 @@ export default function Page3({ navigation }) {
 
       </View>
 
-      {/* 질문 1 */}
+   
       <Text style={styles.number}>1</Text>
       <Text style={styles.question}>위 그림에서 양치를 할 때 필요한 물건을 골라 말해보세요.</Text>
       <TextInput
@@ -68,7 +68,7 @@ export default function Page3({ navigation }) {
         onChangeText={setAnswer1}
       />
 
-      {/* 질문 2 */}
+   
       <Text style={styles.number}>2</Text>
       <Text style={styles.question}>위 그림에서 식사를 할 때 필요한 물건을 골라 말해보세요.</Text>
       <TextInput
@@ -78,7 +78,7 @@ export default function Page3({ navigation }) {
         onChangeText={setAnswer2}
       />
 
-      {/* 정답 확인 버튼 */}
+  
       <Pressable style={styles.nextBtn} onPress={checkAnswer}>
         <Text style={styles.nextBtnText}>정답 확인</Text>
       </Pressable>
@@ -87,7 +87,7 @@ export default function Page3({ navigation }) {
   );
 }
 
-/* ▼ 스타일 ▼ */
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -175,3 +175,4 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
 });
+
